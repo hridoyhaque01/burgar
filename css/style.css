@@ -32,7 +32,12 @@ body {
 /* header start  */
 
 header {
-  padding: 28px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  padding: 35px 0;
+  z-index: 999;
 }
 
 .container {
@@ -51,7 +56,7 @@ header {
 }
 
 .menu {
-  margin-top: 8px;
+  margin-top: 10px;
   width: 70%;
   float: right;
 }
@@ -92,7 +97,7 @@ header {
 /* banner start  */
 
 .banner {
-  padding-bottom: 80px;
+  padding: 80px 0;
   background-image: url("../images/banner.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -100,7 +105,8 @@ header {
 
 .banner_text {
   margin-top: 265px;
-  width: 45%;
+  width: 40%;
+
   float: left;
 }
 
@@ -113,38 +119,42 @@ header {
   border: 3px dashed #3d2514;
 }
 
+.cmn_txt {
+  font-family: AlfaSlabOne-Regular;
+  text-transform: uppercase;
+  text-shadow: 6px 5px 0px #fee7ba;
+  text-shadow: 6px 5px 0px #fee7ba;
+}
+
 .banner_text h1 {
   margin: 35px 0 5px;
-  font-family: AlfaSlabOne-Regular;
   font-size: 114px;
   line-height: 125px;
   letter-spacing: 5px;
-  text-transform: uppercase;
-  text-shadow: 6px 5px 0px #fee7ba;
 }
 
 .banner_text h2 {
-  font-family: AlfaSlabOne-Regular;
   font-size: 56px;
   line-height: 65px;
-  text-transform: uppercase;
-  text-shadow: 6px 5px 0px #fee7ba;
+  letter-spacing: 2px;
 }
 
 .banner_food {
-  width: 48%;
+  position: relative;
+  width: 55%;
   float: right;
 }
 
-.food_img img {
+.banner_food img {
   width: 100%;
 }
 
 .offer {
-  position: relative;
-  z-index: 1;
   margin-top: -196px;
   margin-left: 58px;
+  position: absolute;
+  left: 0;
+  bottom: 65px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -194,7 +204,7 @@ header {
   color: #fff;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top center;
   border-radius: 8px;
 }
 
@@ -240,6 +250,8 @@ header {
 }
 
 .product_header {
+  margin: 0 auto;
+  width: 65%;
   text-align: center;
 }
 
@@ -263,10 +275,6 @@ header {
 
 .cmn_para {
   line-height: 28px;
-}
-
-.header_para {
-  padding: 0 310px;
 }
 
 .products {
@@ -303,7 +311,6 @@ header {
 }
 
 .cmn_btn {
-  height: 55px;
   font-family: AlfaSlabOne-Regular;
   color: #fff;
   text-transform: uppercase;
@@ -322,7 +329,12 @@ header {
 .product_btn {
   margin-top: 30px;
   width: 198px;
+  height: 55px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   font-size: 16px;
+  text-decoration: none;
 }
 
 /* product end  */
@@ -373,7 +385,14 @@ header {
 /* contact start  */
 
 .contact {
-  padding: 60px 0;
+  position: relative;
+  padding: 60px 0 120px;
+}
+
+.container3 {
+  width: 50%;
+  margin: 0 auto;
+  position: relative;
 }
 
 .contact_text {
@@ -381,14 +400,9 @@ header {
   margin-bottom: 80px;
 }
 
-form {
-  margin: 0 auto;
-  width: 45%;
-}
-
 .form_group {
   overflow: hidden;
-  margin-bottom: 22px;
+  margin-bottom: 30px;
 }
 
 .form_group:last-child {
@@ -397,13 +411,13 @@ form {
 
 .form_group input,
 .contact_btn {
-  width: 49%;
+  width: 48%;
   border-radius: 4px;
 }
 
 .form_group input {
   padding-left: 20px;
-  height: 55px;
+  height: 60px;
   font-family: Montserrat-Bold;
   outline: none;
   border: 1px solid #bebebe;
@@ -421,6 +435,31 @@ form {
 .form_group input::placeholder {
   text-transform: uppercase;
   color: #8d8d8d;
+}
+
+.contact_btn {
+  height: 60px;
+}
+
+.common_p {
+  position: absolute;
+}
+
+.common_p img {
+  width: 100%;
+}
+
+.position1 {
+  top: -65px;
+  left: -78px;
+}
+.position2 {
+  top: 195px;
+  left: 180px;
+}
+.position3 {
+  bottom: -220px;
+  right: 0;
 }
 
 /* contact end  */
@@ -480,24 +519,31 @@ footer {
 }
 
 .copyright {
-  margin-top: 6px;
+  margin-top: 15px;
 }
 
 .footer_bottom {
   margin-top: 160px;
 }
+
 .social_links {
   float: right;
+  padding: 10px 0;
 }
 
 .social_links li {
   margin-right: 12px;
   float: left;
   list-style: none;
+  transition: 0.3s;
 }
 
 .social_links li:last-child {
   margin-right: 0;
+}
+
+.social_links li:hover {
+  transform: translateY(-3px);
 }
 
 /* footer end  */
